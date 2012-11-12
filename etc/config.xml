@@ -1,0 +1,31 @@
+<config>
+    <modules>
+        <Radz_LoginSpeedup>
+            <version>0.7.0</version>
+        </Radz_LoginSpeedup>
+    </modules>
+    <global>
+        <models>
+        </models>
+    </global>
+    <frontend>
+        <!--
+        <routers>
+            <install>
+                <use>standard</use>
+                <args>
+                    <module>Mage_Install</module>
+                    <frontName>install</frontName>
+                </args>
+            </install>
+        </routers>
+        -->
+        <layout>
+            <updates>
+                <bundle>
+                    <file>loginspeedup.xml</file>
+                </bundle>
+            </updates>
+        </layout>
+    </frontend>
+</config>
