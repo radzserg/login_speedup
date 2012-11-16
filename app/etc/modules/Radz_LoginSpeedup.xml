@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Radz_LoginSpeedup>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Radz_LoginSpeedup>
+    </modules>
+</config>

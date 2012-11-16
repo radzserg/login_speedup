@@ -22,9 +22,9 @@
         -->
         <layout>
             <updates>
-                <bundle>
+                <loginspeedup>
                     <file>loginspeedup.xml</file>
-                </bundle>
+                </loginspeedup>
             </updates>
         </layout>
     </frontend>
