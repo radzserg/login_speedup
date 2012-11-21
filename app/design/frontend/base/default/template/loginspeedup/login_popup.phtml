@@ -1,0 +1,39 @@
+<div id="lspd_login_popup">
+    <div id="lspd_login_wrapper">    
+        <?php echo $this->getLayout()->createBlock('customer/form_login')
+            ->setTemplate('persistent/customer/form/login.phtml')
+            ->toHtml(); 
+        ?>
+        
+    </div>
+</div>
+
+<script>
+
+var button = $$('.add-to-cart button')[0];
+button.onclick = undefined;
+button.on('click', showLoginDialog)
+
+function showLoginDialog() {
+    var loginPopup = new Window({
+        className:'magento',
+        width:600,
+        height:400,
+        minimizable:false,
+        maximizable:false,
+        draggable: false,
+        showEffectOptions:{duration:0.4},
+        hideEffectOptions:{duration:0.4}
+    });
+    loginPopup.setZIndex(100);
+    loginPopup.showCenter(true);
+
+    loginPopup.setContent('lspd_login_wrapper', false, true)
+
+    loginPopup.show();
+
+    return false;
+}
+
+
+</script>

@@ -5,10 +5,21 @@
         </Radz_LoginSpeedup>
     </modules>
     <global>
+    
         <models>
+        	<loginspeedup>
+                <class>Radz_LoginSpeedup_Model</class>
+            </loginspeedup>
         </models>
+        
+        <blocks>        	        	        
+        	<loginspeedup>
+                <class>Radz_LoginSpeedup_Block</class>
+            </loginspeedup>        	
+        </blocks>          
+              
     </global>
-    <frontend>
+    <frontend>    
         <!--
         <routers>
             <install>
