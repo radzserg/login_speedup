@@ -1,6 +1,6 @@
 <div id="lspd_login_popup">
     <div id="lspd_login_wrapper">    
-        <?php echo $this->getLayout()->createBlock('customer/form_login')
+        <?php echo $this->getLayout()->createBlock('loginspeedup/form_login')
             ->setTemplate('persistent/customer/form/login.phtml')
             ->toHtml(); 
         ?>
@@ -9,16 +9,11 @@
 </div>
 
 <script>
-
-var button = $$('.add-to-cart button')[0];
-button.onclick = undefined;
-button.on('click', showLoginDialog)
-
 function showLoginDialog() {
     var loginPopup = new Window({
         className:'magento',
-        width:600,
-        height:400,
+        width:700,
+        height:500,
         minimizable:false,
         maximizable:false,
         draggable: false,
@@ -31,9 +26,21 @@ function showLoginDialog() {
     loginPopup.setContent('lspd_login_wrapper', false, true)
 
     loginPopup.show();
-
     return false;
 }
 
+function updateHandleToLogin(selector) {    
+    $$(selector).each(function(button) {
+        button.onclick = undefined;
+        button.on('click', showLoginDialog)    
+    });    
+}
 
+document.observe("dom:loaded", function() { 
+    <?php $selectors = $this->getSelectors(); ?>
+    <?php foreach ($selectors as $selector): ?>
+        updateHandleToLogin("<?php echo $selector ?>");
+    <?php endforeach; ?>    
+});
 </script>
+

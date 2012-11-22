@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+        
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>loginspeedup/css/styles.css</name>
+                <params />
+            </action>
+            
+            <action method="addJs"><script>/prototype/window.js</script></action>
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/default.css</name></action>
+            <action method="addItem"><type>js_css</type><name>prototype/windows/themes/magento.css</name></action>
+        </reference>               
+    </default>           
+        
+	<catalog_product_view>	           	
+        <reference name="content">
+            <block type="loginspeedup/handler"></block>
+        </reference>                        
+    </catalog_product_view>		
+	
+	<catalog_category_view>
+		<reference name="content">
+            <block type="loginspeedup/handler"></block>
+        </reference>              
+    </catalog_category_view>
+	
+</layout>

@@ -1,11 +1,12 @@
+<?xml version="1.0"?>
 <config>
     <modules>
         <Radz_LoginSpeedup>
             <version>0.7.0</version>
         </Radz_LoginSpeedup>
     </modules>
-    <global>
     
+    <global>    
         <models>
         	<loginspeedup>
                 <class>Radz_LoginSpeedup_Model</class>
@@ -19,18 +20,8 @@
         </blocks>          
               
     </global>
-    <frontend>    
-        <!--
-        <routers>
-            <install>
-                <use>standard</use>
-                <args>
-                    <module>Mage_Install</module>
-                    <frontName>install</frontName>
-                </args>
-            </install>
-        </routers>
-        -->
+    
+    <frontend>           
         <layout>
             <updates>
                 <loginspeedup>

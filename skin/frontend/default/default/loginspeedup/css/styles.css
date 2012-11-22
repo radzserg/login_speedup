@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+#lspd_login_popup {
+	display: none;
+}
+
+#lspd_login_wrapper .messages {
+	display: none;
+}
